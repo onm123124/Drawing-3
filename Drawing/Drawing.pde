@@ -11,7 +11,6 @@ PImage pic, pic2, pic3;
 Boolean nightMode=false;
 int tintDayMode=255, tintDayModeOpacity=50;
 int tintRed=64, tintGreen=64, tintBlue=40, tintNightModeOpacity=85;
-//
 void setup()
 {
   size(800, 600); //Landscape
@@ -32,17 +31,17 @@ void setup()
   topHalfY = appHeight * 1/30;
   topHalfWidth = appWidth * 1/4;
   topHalfHeight = appHeight * 1/4;
-  bottomHalfX = appWidth *29/40;
-  bottomHalfY = appHeight * 29/40;
-  bottomHalfWidth = appWidth * 3/4;
-  bottomHalfHeight = appHeight * 3/4;
+  bottomHalfX = appWidth *2/4;
+  bottomHalfY = appHeight * 2/4;
+  bottomHalfWidth = appWidth * 2/4;
+  bottomHalfHeight = appHeight * 1/4;
   //
   int picWidth1 = 800; //background
   int picHeight1 = 600;
   int picWidth2 = 500; //Walter big
   int picHeight2 = 500;
-  int picWidth3 = 780; //Walter small
-  int picHeight3 = 580;
+  int picWidth3 = 1260; //Walter small
+  int picHeight3 = 780;
   //
   //Image Orientation: Landscape, Portrait, Square
   //Scaling Image size with aspect ratio requires larger dimension
@@ -114,6 +113,12 @@ void setup()
 //
 void draw()
 {
+  textSize(60);
+text("Aspect Ratio", 40, 120); 
+fill(0, 408, 612);
+text("", 40, 240);
+fill(0, 408, 612, 204);
+text("Not Aspect Ratio", 40, 360);
   image( pic2, topHalfX, topHalfY, picWidthAdjusted2, picHeightAdjusted2 );
   image( pic3, bottomHalfX, bottomHalfY, picWidthAdjusted3, picHeightAdjusted3 );
 }//End draw
